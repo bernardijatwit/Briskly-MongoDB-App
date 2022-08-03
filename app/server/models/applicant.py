@@ -9,6 +9,7 @@ class ApplicantSchema(BaseModel):
 	year: int = Field(..., gt=0, lt=9)
 	gpa: float = Field(..., le=4.0)
 
+
 	class Config:
 		schema_extra = {
 			"example": {
@@ -18,25 +19,25 @@ class ApplicantSchema(BaseModel):
 				"year": 5,
 				"gpa": "3.5",
 			}
-	}
+		}
 
 class UpdateApplicantModel(BaseModel):
-    fullname: Optional[str]
-    email: Optional[EmailStr]
-    degree_of_studey: Optional[str]
-    year: Optional[int]
-    gpa: Optional[float]
+    	fullname: Optional[str]
+    	email: Optional[EmailStr]
+    	degree_of_studey: Optional[str]
+    	year: Optional[int]
+    	gpa: Optional[float]
 
-    class Config:
-        schema_extra = {
-            "example": {
-                "fullname": "John Doe",
-                "email": "jdoe@wit.edu",
-                "course_of_study": "Computer Science and Applied Mathemeatics",
-                "year": 5,
-                "gpa": "3.8",
-            }
-        }
+    	class Config:
+    		schema_extra = {
+            		"example": {
+                		"fullname": "John Doe",
+                		"email": "jdoe@wit.edu",
+                		"course_of_study": "Computer Science and Applied Mathemeatics",
+                		"year": 5,
+                		"gpa": "3.8",
+            		}
+        	}
 
 def ResponseModel(data, message):
 	return {

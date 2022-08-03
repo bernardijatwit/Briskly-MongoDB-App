@@ -23,12 +23,12 @@ async def add_applicant_data(applicant: ApplicantSchema = Body(...)):
 	new_applicant = await add_applicant(applicant)
 	return ResponseModel(new_applicant, "Applicant added successfully.")
 
-@router.post("/", response_description="Applicants retrieved")
-async def get_applicants():
-	applicant = await retrieve_applicants()
-	if applicants:
-		return ResponseModel(applicants, "Applicants data retrieved successfully")
-	return ResponseModel(applicants, "Empty")
+#@router.get("/", response_description="Applicants retrieved")
+#async def get_applicants():
+#	applicant = await retrieve_applicants()
+#	if applicants:
+#		return ResponseModel(applicants, "Applicants data retrieved successfully")
+#	return ResponseModel(applicants, "Empty")
 
 @router.get("/{id}", response_description="Applicant data retrieved")
 async def get_applicant_data(id):

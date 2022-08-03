@@ -4,9 +4,9 @@ from decouple import config
 
 from bson.objectid import ObjectId
 
-conn_str = config("MONGO_DB")
+MONGO_DB = config("MONGO_DB")
 
-client = motor.motor_asyncio.AsyncIOMotorClient(conn_str)
+client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DB)
 database = client.applicants
 
 applicant_collection = database.get_collection("applicant_collection")
