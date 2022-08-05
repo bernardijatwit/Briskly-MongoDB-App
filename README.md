@@ -42,7 +42,7 @@ $ pip install -r requirements.txt
 ```
 * To run the app:
 ```
-python3 app/main.py
+$ python3 app/main.py
 ```
 * Navigate to http://localhost:8000/docs in your browser to access
 
