@@ -46,7 +46,8 @@ $ python3 app/main.py
 ```
 * Navigate to http://localhost:8000/docs in your browser to access
 
-
+### Issues
+* Currently the Get all applicants function does not work, and inputing anything other than a valid ID length will produce an error in any ID field.
 
 ## Authors
 
